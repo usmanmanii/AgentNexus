@@ -1,0 +1,185 @@
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 140px 24px 40px;
+  overflow: hidden;
+}
+
+.heroGlow {
+  position: absolute;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(59, 177, 129, 0.08), transparent 70%);
+  pointer-events: none;
+}
+
+.logoBlock {
+  margin-bottom: 28px;
+  animation: fadeInUp 0.5s ease both;
+}
+
+.asciiLogo {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.logoChar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 72px;
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: var(--neutral-0);
+  background: var(--dark-green);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 16px rgba(26, 60, 52, 0.3);
+  transition: transform 0.2s var(--ease-spring);
+}
+
+.logoChar:hover {
+  transform: translateY(-4px) scale(1.05);
+}
+
+.tagline {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--primary-600);
+}
+
+.description {
+  max-width: 620px;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--neutral-500);
+  margin-bottom: 36px;
+  animation: fadeInUp 0.5s ease both 0.1s;
+}
+
+.trySection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  animation: fadeInUp 0.5s ease both 0.2s;
+}
+
+.tryTitle {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--neutral-400);
+}
+
+.terminalBox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  background: var(--neutral-900);
+  border: 1px solid var(--neutral-700);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-smooth);
+  min-width: 440px;
+}
+
+.terminalBox:hover {
+  border-color: var(--primary-500);
+  box-shadow: 0 0 20px rgba(59, 177, 129, 0.15);
+}
+
+.dollar {
+  color: var(--accent-lime);
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.cmd {
+  flex: 1;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 14px;
+  color: var(--neutral-200);
+}
+
+.placeholder {
+  color: var(--neutral-500);
+}
+
+.copyBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: 1px solid var(--neutral-600);
+  border-radius: var(--radius-sm);
+  color: var(--neutral-400);
+  cursor: pointer;
+  transition: all var(--duration-fast);
+}
+
+.copyBtn:hover {
+  background: var(--neutral-700);
+  color: var(--neutral-200);
+}
+
+.copied {
+  background: var(--primary-600) !important;
+  border-color: var(--primary-600) !important;
+  color: white !important;
+}
+
+.liveBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--primary-700);
+  background: var(--primary-50);
+  border: 1px solid var(--primary-100);
+  border-radius: var(--radius-full);
+  animation: fadeInUp 0.5s ease both 0.3s;
+}
+
+.liveDot {
+  width: 6px;
+  height: 6px;
+  background: var(--success);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@media (max-width: 520px) {
+  .asciiLogo { gap: 4px; }
+  .logoChar { width: 44px; height: 52px; font-size: 24px; }
+  .terminalBox { min-width: auto; width: 100%; }
+}

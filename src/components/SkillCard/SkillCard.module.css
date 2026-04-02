@@ -1,0 +1,257 @@
+.card {
+  position: relative;
+  background: var(--neutral-0);
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-smooth);
+  animation: fadeInUp var(--duration-slow) var(--ease-smooth) both;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-500), var(--accent-teal));
+  opacity: 0;
+  transition: opacity var(--duration-normal);
+}
+
+.card:hover {
+  border-color: var(--primary-300);
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+  transform: translateY(-4px);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ownerInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--neutral-150);
+  object-fit: cover;
+}
+
+.ownerName {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--neutral-500);
+}
+
+.verifiedBadge {
+  display: flex;
+  align-items: center;
+  color: var(--primary-600);
+}
+
+.agentBadges {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.agentBadge {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+}
+
+.cardBody {
+  flex: 1;
+}
+
+.skillName {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.description {
+  font-size: 13px;
+  color: var(--neutral-500);
+  line-height: 1.55;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.categoryRow {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.categoryTag {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--primary-800);
+  background: var(--primary-50);
+  border: 1px solid var(--primary-100);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+}
+
+.langTag {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--neutral-600);
+  background: var(--neutral-100);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+}
+
+.installSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--neutral-900);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  overflow: hidden;
+}
+
+.installCmd {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+}
+
+.dollar {
+  color: var(--accent-lime);
+  font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+  font-size: 13px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.cmdText {
+  font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+  font-size: 12px;
+  color: var(--neutral-300);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.copyBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border: 1px solid var(--neutral-700);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--neutral-400);
+  cursor: pointer;
+  transition: all var(--duration-fast);
+}
+
+.copyBtn:hover {
+  background: var(--neutral-700);
+  color: var(--neutral-100);
+  border-color: var(--neutral-600);
+}
+
+.copyBtnCopied {
+  background: var(--primary-600) !important;
+  border-color: var(--primary-600) !important;
+  color: white !important;
+}
+
+.statsRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 4px;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--neutral-500);
+}
+
+.stat svg {
+  color: var(--neutral-400);
+}
+
+.statTime {
+  margin-left: auto;
+  font-size: 11px;
+  color: var(--neutral-400);
+}
+
+.viewArrow {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--neutral-100);
+  border-radius: var(--radius-full);
+  color: var(--neutral-500);
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: all var(--duration-normal) var(--ease-smooth);
+}
+
+.card:hover .viewArrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 18px;
+  }
+
+  .installCmd {
+    max-width: 200px;
+  }
+
+  .statsRow {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
