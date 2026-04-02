@@ -1,0 +1,212 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Search */
+.searchWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  background: var(--neutral-0);
+  border: 2px solid var(--neutral-200);
+  border-radius: var(--radius-xl);
+  transition: all var(--duration-normal) var(--ease-smooth);
+  box-shadow: var(--shadow-xs);
+}
+
+.searchFocused {
+  border-color: var(--primary-400);
+  box-shadow: 0 0 0 4px rgba(59, 177, 129, 0.1), var(--shadow-sm);
+}
+
+.searchIcon {
+  color: var(--neutral-400);
+  flex-shrink: 0;
+  transition: color var(--duration-fast);
+}
+
+.searchFocused .searchIcon {
+  color: var(--primary-500);
+}
+
+.searchInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--neutral-900);
+}
+
+.searchInput::placeholder {
+  color: var(--neutral-400);
+  font-weight: 400;
+}
+
+.clearBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: var(--neutral-100);
+  border-radius: var(--radius-full);
+  color: var(--neutral-500);
+  cursor: pointer;
+  transition: all var(--duration-fast);
+}
+
+.clearBtn:hover {
+  background: var(--neutral-200);
+  color: var(--neutral-700);
+}
+
+.shortcutHint {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.shortcutHint kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 5px;
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--neutral-400);
+  background: var(--neutral-100);
+  border: 1px solid var(--neutral-200);
+  border-radius: 4px;
+}
+
+/* Filter Row */
+.filterRow {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filterLabel {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--neutral-400);
+}
+
+.pillGroup {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.pill {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--neutral-600);
+  background: var(--neutral-0);
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-smooth);
+  white-space: nowrap;
+}
+
+.pill:hover {
+  border-color: var(--primary-300);
+  background: var(--primary-50);
+  color: var(--primary-800);
+}
+
+.pillActive {
+  background: var(--dark-green) !important;
+  color: var(--neutral-0) !important;
+  border-color: var(--dark-green) !important;
+}
+
+.pillIcon {
+  font-size: 12px;
+}
+
+.selectFilter {
+  padding: 8px 32px 8px 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--neutral-700);
+  background: var(--neutral-0);
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%239ca8a3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  transition: all var(--duration-fast);
+}
+
+.selectFilter:hover {
+  border-color: var(--primary-300);
+}
+
+.selectFilter:focus {
+  outline: none;
+  border-color: var(--primary-400);
+  box-shadow: 0 0 0 3px rgba(59, 177, 129, 0.1);
+}
+
+.resultCount {
+  margin-left: auto;
+  font-size: 13px;
+  color: var(--neutral-400);
+  font-weight: 500;
+  white-space: nowrap;
+  align-self: flex-end;
+  padding-bottom: 2px;
+}
+
+.countNum {
+  font-weight: 700;
+  color: var(--primary-700);
+}
+
+@media (max-width: 768px) {
+  .filterRow {
+    gap: 12px;
+  }
+
+  .pillGroup {
+    gap: 4px;
+  }
+
+  .shortcutHint {
+    display: none;
+  }
+
+  .resultCount {
+    margin-left: 0;
+    width: 100%;
+  }
+}

@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AgentNexus: The Universal Agent Skill Registry
 
-## Getting Started
+Welcome to **AgentNexus**, the premier open-source hub for the agentic web. Our mission is to provide a central registry and learning ecosystem for **Model Context Protocol (MCP)** skills and AI capabilities.
 
-First, run the development server:
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+[![GitHub Stars](https://img.shields.io/github/stars/mqasim/agent-skills-directory?style=social)](https://github.com/mqasim/agent-skills-directory)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This is an **Open Source Project**, and we wholeheartedly welcome the community to contribute! Whether you're building new skills, improving documentation, or refining the architecture, your help makes the agentic web better for everyone.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Current Features (V1.0 - Done)
 
-## Learn More
+- [x] **Skills Leaderboard:** Discover top-performing agent skills based on community feedback.
+- [x] **Advanced Search & Filtering:** Real-time discovery of MCP servers by category, popularity, and use case.
+- [x] **Skill Details & Documentation:** Comprehensive views for each skill, including metadata and integration guides.
+- [x] **Model Compatibility Slider:** Visual indicator of compatibility with major models like Claude, Gemini, and GPT-4.
+- [x] **Performance Stats Bar:** Live metrics on platform usage and community growth.
+- [x] **Responsive Modern Design:** Premium Next.js-based UI optimized for all devices.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚧 Upcoming Features (The AgentNexus Roadmap)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Our target is to transform AgentNexus into a highly elaborative ecosystem where developers can learn, test, and deploy agent skills without wasting tokens or time.
 
-## Deploy on Vercel
+### 1. Example-First Skill Registry
+- **Interactive Dry-Runs:** Visual simulator using MCP Inspector to "call" tools with mock data—no LLM or API key required.
+- **Prompt-to-Action Previews:** Side-by-side view showing sample user prompts and the resulting tool calls.
+- **Token Consumption Metrics:** Real-time cost estimates for tool schemas across different model providers.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 2. Intent-Based Tool Orchestration
+- **Atomic vs. Composite Views:** Toggle between raw API endpoints and "Optimized Workflows".
+- **Schema Compression Engine:** Automated tool for stripping verbose OpenAPI specs into "Brief" semantic schemas to save tokens.
+- **Semantic Breadcrumbs:** Metadata-driven guidance for agents to suggest the next logical tool call.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 3. Pro Architectural Learning Center
+- **Architecture Deep Dives:** Detailed guides on Claude's PTC (Programmatic Tool Calling), Gemini's ADK (Agent Development Kit), and OpenAI Codex structure.
+- **Universal Configuration Generator:** One-click config generation for Cursor, VS Code, and Windsurf.
+- **Open-Source Repository Explorer:** Deep dives into repositories like `nanobot` and `AutoGPT` to understand agentic patterns like a pro.
+
+### 4. Enterprise-Grade Management
+- **Setup Wizards:** Multi-platform (Node, Python, Go) installation guidance.
+- **Verified Maintainer Badges:** Trust system based on DNS and GitHub records.
+- **Governance Tools:** Allow-lists and circuit breakers for managing agentic loops in production.
+
+---
+
+## 🤝 For Contributors: Priority Roadmap
+
+If you want to contribute, here are the high-priority features we are looking for:
+
+- [ ] **Zero-Token Simulation:** Implement a proxy layer to mock MCP server responses.
+- [ ] **Architecture Documentation:** Write "Pro" guides for Claude/Gemini/Codex integration patterns.
+- [ ] **Governance Circuit Breakers:** Develop logic to prevent runaway agentic loops and exfiltration risks.
+- [ ] **Risk Classification:** Add a system to tag skills by privilege level (e.g., Read-Only vs. Write-Access).
+- [ ] **Failure Recovery Templates:** Standardized error handling instructions for skill documentation.
+
+---
+
+## 🛠️ Getting Started
+
+### Prerequisites
+
+- Node.js 18.x or later
+- npm/yarn/pnpm
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/agent-skills-directory.git
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open [http://localhost:3000](http://localhost:3000) to see the result.
+
+---
+
+## 📖 Learn More
+
+Explore the architectural foundations that inspire this project:
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Model Context Protocol (MCP)](https://modelcontextprotocol.io)
+- [Anthropic Tool Use Guide](https://www.anthropic.com/engineering/advanced-tool-use)
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+*Made with ❤️ for the AI community. Let's build the agentic web together!*
